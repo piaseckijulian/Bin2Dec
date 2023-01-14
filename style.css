@@ -1,0 +1,17 @@
+body {
+  background-color: #212121;
+  color: white;
+  font-size: 40px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 25px;
+}
+button,
+input {
+  background-color: #1e1c1c;
+  color: white;
+  border: none;
+  font-size: 35px;
+}
+button {
+  cursor: pointer;
+}
