@@ -12,6 +12,6 @@ input {
   border: none;
   font-size: 35px;
 }
-button {
+input[type='submit'] {
   cursor: pointer;
 }
