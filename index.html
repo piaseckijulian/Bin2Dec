@@ -12,8 +12,8 @@
 <body>
   <h1>⭐Bin2Dec</h1>
   <p>Enter Binary Number and you'll get this Number in Decimal</p>
-  <form onsubmit="return">
-    <input type="number" id="input" min="0" max="1" required>
+  <form onsubmit="return false">
+    <input inputmode="numeric" pattern="[0-1]*" id="input" maxlength="8" required>
     <input type="submit" id="submit">
   </form>
   <div id="decimal"></div>

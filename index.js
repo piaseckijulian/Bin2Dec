@@ -5,7 +5,11 @@ const dec = document.getElementById('decimal');
 const bin2dec = () => {
   const binValue = bin.value;
 
-  if (binValue > 1 || binValue < 0) return;
+  for (const value of binValue) {
+    if (Number(value) === 1) continue;
+    else if (Number(value) === 0) continue;
+    else return;
+  }
 
   let decimals;
   let binArray = binValue.split('');
