@@ -5,39 +5,26 @@ const dec = document.getElementById('decimal');
 const bin2dec = () => {
   const binValue = bin.value;
 
-  if (
-    binValue.length >= 4 &&
-    Number(binValue) % 1 === 0 &&
-    !binValue.includes('2') &&
-    !binValue.includes('3') &&
-    !binValue.includes('4') &&
-    !binValue.includes('5') &&
-    !binValue.includes('6') &&
-    !binValue.includes('7') &&
-    !binValue.includes('8') &&
-    !binValue.includes('9')
-  ) {
-    let decimals;
-    let binArray = binValue.split('');
+  if (binValue > 1 || binValue < 0) return;
 
-    binArray = binArray.map((bin) => parseInt(bin));
+  let decimals;
+  let binArray = binValue.split('');
 
-    let binArrayIndex = -1;
-    let bin2decPower = binArray.length;
+  binArray = binArray.map((bin) => parseInt(bin));
 
-    for (const binNumber of binArray) {
-      binArrayIndex += 1;
-      bin2decPower -= 1;
+  let binArrayIndex = -1;
+  let bin2decPower = binArray.length;
 
-      binArray[binArrayIndex] = binNumber * 2 ** bin2decPower;
-    }
+  for (const binNumber of binArray) {
+    binArrayIndex += 1;
+    bin2decPower -= 1;
 
-    decimals = binArray.reduce((a, b) => a + b);
-
-    dec.innerText = `Decimal Number: ${decimals}`;
-  } else {
-    dec.innerText = '⛔ Error!';
+    binArray[binArrayIndex] = binNumber * 2 ** bin2decPower;
   }
+
+  decimals = binArray.reduce((a, b) => a + b);
+
+  dec.innerText = `Decimal Number: ${decimals}`;
 };
 
 submitBtn.onclick = () => bin2dec();
