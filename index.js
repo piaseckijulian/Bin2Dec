@@ -1,18 +1,10 @@
-const bin = document.getElementById('input');
-const submitBtn = document.getElementById('submit');
-const dec = document.getElementById('decimal');
+const binaryInput = document.querySelector('#binary');
+const decimalDiv = document.querySelector('#decimal');
+const form = document.querySelector('form');
 
 const bin2dec = () => {
-  const binValue = bin.value;
-
-  for (const value of binValue) {
-    if (Number(value) === 1) continue;
-    else if (Number(value) === 0) continue;
-    else return;
-  }
-
   let decimals;
-  let binArray = binValue.split('');
+  let binArray = binaryInput.value.split('');
 
   binArray = binArray.map((bin) => parseInt(bin));
 
@@ -28,7 +20,10 @@ const bin2dec = () => {
 
   decimals = binArray.reduce((a, b) => a + b);
 
-  dec.innerText = `Decimal Number: ${decimals}`;
+  decimalDiv.innerText = `Decimal Number: ${decimals}`;
 };
 
-submitBtn.onclick = () => bin2dec();
+form.onsubmit = (event) => {
+  event.preventDefault();
+  bin2dec();
+};

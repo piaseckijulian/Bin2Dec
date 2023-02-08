@@ -1,23 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bin2Dec</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bin2Dec</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-  <h1>⭐Bin2Dec</h1>
-  <p>Enter Binary Number and you'll get this Number in Decimal</p>
-  <form onsubmit="return false">
-    <input inputmode="numeric" pattern="[0-1]*" id="input" maxlength="8" required>
-    <input type="submit" id="submit">
-  </form>
-  <div id="decimal"></div>
-  <script src="index.js"></script>
-</body>
-
+  <body>
+    <h1>⭐Bin2Dec</h1>
+    <form>
+      <input
+        inputmode="numeric"
+        pattern="[0-1]*"
+        id="binary"
+        maxlength="8"
+        required
+        placeholder="Binary Number (0-1)"
+      />
+      <input type="submit" id="button" />
+    </form>
+    <div id="decimal"></div>
+    <script src="index.js"></script>
+  </body>
 </html>

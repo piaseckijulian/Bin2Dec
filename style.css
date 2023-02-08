@@ -1,17 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+* {
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+}
 body {
-  background-color: #212121;
-  color: white;
-  font-size: 40px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin: 25px;
+  background-color: #222;
+  color: #fff;
+  font-size: 2.5rem;
+  text-align: center;
 }
-button,
-input {
-  background-color: #1e1c1c;
-  color: white;
+#button,
+#binary {
+  background-color: #111;
+  color: #fff;
+  font-size: 2.5rem;
   border: none;
-  font-size: 35px;
 }
-input[type='submit'] {
+#button {
   cursor: pointer;
+}
+#decimal {
+  margin-top: 0.5rem;
 }
